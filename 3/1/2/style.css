@@ -1,0 +1,64 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cracker {
+  position: relative;
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  animation: cracker-animation 2s infinite;
+}
+
+.cracker-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.text-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.text {
+  font-size: 48px;
+  font-weight: bold;
+  color: #333;
+  opacity: 0;
+  animation: text-animation 2s ease-in-out forwards;
+}
+
+@keyframes cracker-animation {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
